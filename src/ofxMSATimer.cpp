@@ -33,15 +33,8 @@
 ofxMSATimer msaTimer;
 
 ofxMSATimer::ofxMSATimer() {
-	#if defined(_MSC_VER)
-		machMultiplier = 1/1000.0;
-		machStartime = machAbsoluteTime();
-		initialize();
-	#else
-		mach_timebase_info(&info); 
-		machMultiplier = info.numer / 1000000000.0 / info.denom;
-		machStartime = mach_absolute_time();
-	#endif	
+	machMultiplier = 1/1000000000.0;
+	machStartime = mach_absolute_time();
     startTime = lastCallTime = appStartTime = machStartime * machMultiplier;
     
 }

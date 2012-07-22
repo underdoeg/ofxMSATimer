@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxSystemTime.h"
 #include "ofxMSATimer.h"
 
 class testApp : public ofBaseApp{

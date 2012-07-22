@@ -21,9 +21,6 @@ void testApp::draw(){
 	message = "ofxMSATimer.getAppTime(): " + ofToString(ofMSATimer.getAppTime()) + " sec";
 	TTF.drawString(message, 100, 120);
 
-	message = "ofxMSATimer.getMachAbsoluteTime(): " + ofToString(ofMSATimer.getMachAbsoluteTime()) + " ns";
-	TTF.drawString(message, 100, 140);
-
 	double elapsedTimeSec = ofMSATimer.getElapsedTime();
 	message = "ofxMSATimer.getElapsedTime(): " + ofToString(elapsedTimeSec*1000) + " ms"; //To millis
 	TTF.drawString(message, 100, 160);
